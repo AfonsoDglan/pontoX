@@ -18,6 +18,6 @@ _- Registro de Ponto do Funcionario
 
 ## Protótipo
 
-![Entrada]()
-![Saída]()
-![Ponto Batido]( )
+![Sem registro](https://github.com/AfonsoDglan/pontoX/assets/101116408/de2fb6ce-ae74-43dd-932e-85970eefe750)
+![Entrada](https://github.com/AfonsoDglan/pontoX/assets/101116408/14312742-82e5-4ac8-8b69-75a34e6722e8)
+![Saída](https://github.com/AfonsoDglan/pontoX/assets/101116408/77a8cba0-c7f9-458b-8fb9-11075678ebc3)
