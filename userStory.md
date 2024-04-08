@@ -32,4 +32,16 @@ ver os dias que faltei ou registrei a saída antes do fim do expediente e poder 
                                                                  
  ## Protótipo   
 ![Ficha de Frequencia](https://github.com/AfonsoDglan/pontoX/assets/58058177/a9df39ac-d9cf-4862-be44-1965979187d2)         
+
+
+# User story
+_- Ficha de solicitação de Recesso
+|User Story
+|-------------------------------------
+| Como funcion´rio da empresa eu preciso de uma tela que permitite a solicitação do recesso, e a possibilidade de poder cosultar os meus pedidos anteriores, e poder saber  consultar o tempo que me é permitido para pegar um recesso.
+                                                                 
+ ## Protótipo   
+![iPhone 14   15 Pro Max - 2](https://github.com/AfonsoDglan/pontoX/assets/92115754/a9db7da2-446e-4a17-8b40-2a6fce1d917e)
+![iPhone 14   15 Pro Max - 1](https://github.com/AfonsoDglan/pontoX/assets/92115754/8867f403-644f-4257-9cb4-de518fe2dace)
+
                                   
