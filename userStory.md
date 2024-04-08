@@ -21,3 +21,15 @@ _- Registro de Ponto do Funcionario
 ![Sem registro](https://github.com/AfonsoDglan/pontoX/assets/101116408/de2fb6ce-ae74-43dd-932e-85970eefe750)
 ![Entrada](https://github.com/AfonsoDglan/pontoX/assets/101116408/14312742-82e5-4ac8-8b69-75a34e6722e8)
 ![Saída](https://github.com/AfonsoDglan/pontoX/assets/101116408/77a8cba0-c7f9-458b-8fb9-11075678ebc3)
+
+
+# User story
+_- Ficha de Registro de Ponto do Funcionario 
+|User Story
+|-------------------------------------
+| Como um funcionário da empresa, eu gostaria de ter uma tela intuitiva para verificar meus registros e horário de entrada e saída,
+ver os dias que faltei ou registrei a saída antes do fim do expediente e poder justificar minhas ocorrências.
+                                                                 
+ ## Protótipo   
+![Ficha de Frequencia](https://github.com/AfonsoDglan/pontoX/assets/58058177/a9df39ac-d9cf-4862-be44-1965979187d2)         
+                                  
