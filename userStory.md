@@ -8,3 +8,16 @@ _- Banco de Horas_
 
 ![Banco de Horas](https://github.com/AfonsoDglan/pontoX/assets/73500497/8fa8f857-edcb-45a2-b6a8-0040e026419a)
 ![Banco de Horas2](https://github.com/AfonsoDglan/pontoX/assets/73500497/70d27aae-3ae4-407e-8d30-e17bd575362a)
+
+# User story
+_- Registro de Ponto do Funcionario 
+ |User Story
+ |-------------------------------------
+ | Como um funcionário da empresa, eu gostaria de ter uma tela intuitiva para registrar meu horário de entrada e saída,
+  Para que minha presença seja registrada de forma precisa e eficiente.
+
+## Protótipo
+
+![Sem registro](https://github.com/AfonsoDglan/pontoX/assets/101116408/de2fb6ce-ae74-43dd-932e-85970eefe750)
+![Entrada](https://github.com/AfonsoDglan/pontoX/assets/101116408/14312742-82e5-4ac8-8b69-75a34e6722e8)
+![Saída](https://github.com/AfonsoDglan/pontoX/assets/101116408/77a8cba0-c7f9-458b-8fb9-11075678ebc3)
