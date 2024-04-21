@@ -1,11 +1,12 @@
 import * as React from "react";
 import { StyleSheet, View, Text, Pressable } from "react-native";
 import { Image } from "expo-image";
-import { useNavigation } from "@react-navigation/native";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { useNavigation, ParamListBase } from "@react-navigation/native";
 import { Color, FontSize, FontFamily, Border } from "../GlobalStyles";
 
 const MenuAberto = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<StackNavigationProp<ParamListBase>>();
 
   return (
     <View style={styles.menuAberto}>
@@ -30,8 +31,8 @@ const MenuAberto = () => {
         <Text style={[styles.incio, styles.incioTypo]}>Início</Text>
         <Text style={[styles.solicitaes, styles.incioTypo]}>Solicitações</Text>
         <Text style={[styles.perfil, styles.incioTypo]}>Perfil</Text>
-      </View>
 
+      </View>
       <Pressable
         style={styles.sair}
         onPress={() => navigation.navigate("TelaInicial")}

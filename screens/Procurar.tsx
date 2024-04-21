@@ -1,11 +1,12 @@
 import * as React from "react";
 import { StyleSheet, View, Pressable, Text } from "react-native";
 import { Image } from "expo-image";
-import { useNavigation } from "@react-navigation/native";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { useNavigation, ParamListBase } from "@react-navigation/native";
 import { Border, Color, FontSize, FontFamily } from "../GlobalStyles";
 
 const Procurar = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<StackNavigationProp<ParamListBase>>();
 
   return (
     <View style={styles.procurar}>
@@ -47,7 +48,6 @@ const Procurar = () => {
         <Text style={[styles.solicitaes, styles.incioTypo]}>Solicitações</Text>
         <Text style={[styles.perfil, styles.incioTypo]}>Perfil</Text>
       </View>
-
       <View style={[styles.resultados, styles.resultadosLayout]}>
         <Image
           style={[styles.resultadosChild, styles.resultadosLayout]}

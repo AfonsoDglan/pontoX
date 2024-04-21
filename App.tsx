@@ -1,14 +1,60 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+const Stack = createNativeStackNavigator();
+import * as React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { useFonts } from "expo-font";
+import MenuAberto from "./screens/MenuAberto";
+import TelaInicial from "./screens/TelaInicial";
+import OlhoFechado from "./screens/OlhoFechado";
+import Procurar from "./screens/Procurar";
 
-export default function App() {
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import { View, Text, Pressable, TouchableOpacity } from "react-native";
+
+const App = () => {
+  const [hideSplashScreen, setHideSplashScreen] = React.useState(true);
+
+  const [fontsLoaded, error] = useFonts({
+    "Poppins-Regular": require("./assets/fonts/Poppins-Regular.ttf"),
+    "Poppins-Bold": require("./assets/fonts/Poppins-Bold.ttf"),
+  });
+
+  if (!fontsLoaded && !error) {
+    return null;
+  }
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <>
+      <NavigationContainer>
+        {hideSplashScreen ? (
+          <Stack.Navigator screenOptions={{ headerShown: false }}>
+            <Stack.Screen
+              name="MenuAberto"
+              component={MenuAberto}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="TelaInicial"
+              component={TelaInicial}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="OlhoFechado"
+              component={OlhoFechado}
+              options={{ headerShown: false }}
+            />
+            <Stack.Screen
+              name="Procurar"
+              component={Procurar}
+              options={{ headerShown: false }}
+            />
+          </Stack.Navigator>
+        ) : null}
+      </NavigationContainer>
+    </>
   );
-}
+};
+export default App;
+
 
 const styles = StyleSheet.create({
   container: {

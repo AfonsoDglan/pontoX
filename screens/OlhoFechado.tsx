@@ -1,14 +1,15 @@
 import * as React from "react";
 import { Image } from "expo-image";
 import { StyleSheet, Text, View, Pressable } from "react-native";
-import { useNavigation } from "@react-navigation/native";
-import { FontSize, FontFamily, Color } from "../GlobalStyles";
+import { StackNavigationProp } from "@react-navigation/stack";
+import { useNavigation, ParamListBase } from "@react-navigation/native";
+import { Color, FontSize, FontFamily } from "../GlobalStyles";
 
-const TelaInicial = () => {
-  const navigation = useNavigation();
+const OlhoFechado = () => {
+  const navigation = useNavigation<StackNavigationProp<ParamListBase>>();
 
   return (
-    <View style={[styles.telaInicial, styles.iconLayout1]}>
+    <View style={[styles.olhoFechado, styles.iconLayout2]}>
       <View style={[styles.bancoDeHoras, styles.bancoDeHorasLayout]}>
         <Image
           style={[styles.squircleIcon, styles.squircleIconPosition]}
@@ -20,16 +21,16 @@ const TelaInicial = () => {
         </Text>
       </View>
       <Image
-        style={[styles.menuIcon, styles.iconLayout]}
+        style={[styles.menuIcon, styles.iconLayout1]}
         contentFit="cover"
         source={require("../assets/menu.png")}
       />
-      <Text style={[styles.bemVindoUsurioContainer, styles.text2FlexBox]}>
+      <Text style={[styles.bemVindoUsurioContainer, styles.textTypo1]}>
         <Text style={styles.bemVindo}>Bem vindo,</Text>
-        <Text style={styles.text2Typo}> Usuário!</Text>
+        <Text style={styles.textTypo}> Usuário!</Text>
       </Text>
       <Image
-        style={[styles.procurarIcon, styles.iconLayout]}
+        style={[styles.procurarIcon, styles.iconLayout1]}
         contentFit="cover"
         source={require("../assets/procurar.png")}
       />
@@ -41,23 +42,55 @@ const TelaInicial = () => {
         />
         <Text style={[styles.lquido, styles.lquidoTypo]}>Líquido</Text>
         <Text style={[styles.descontos, styles.lquidoTypo]}>Descontos</Text>
-        <Text style={[styles.text, styles.textTypo]}>0,00</Text>
-        <Text style={[styles.text1, styles.textTypo]}>1520,75</Text>
-        <Text style={[styles.bruto, styles.brutoPosition]}>Bruto</Text>
-        <Pressable
-          style={styles.eye}
-          onPress={() => navigation.navigate("OlhoFechado")}
-        >
-          <Image
-            style={[styles.icon, styles.iconLayout1]}
-            contentFit="cover"
-            source={require("../assets/eye.png")}
-          />
-        </Pressable>
-        <Text style={[styles.contrachequeAbril, styles.brutoPosition]}>
+        <Text style={[styles.bruto, styles.textTypo1]}>Bruto</Text>
+        <Text style={[styles.contrachequeAbril, styles.textTypo1]}>
           Contracheque | Abril 2024
         </Text>
-        <Text style={[styles.r152075, styles.brutoPosition]}>R$ 1520,75</Text>
+        <Pressable
+          style={[styles.eyeSlash, styles.iconLayout]}
+          onPress={() => navigation.navigate("TelaInicial")}
+        >
+          <Image
+            style={[styles.icon, styles.iconLayout2]}
+            contentFit="cover"
+            source={require("../assets/eyeslash.png")}
+          />
+        </Pressable>
+        <Image
+          style={[styles.circleIcon, styles.circleIconPosition1]}
+          contentFit="cover"
+          source={require("../assets/circle.png")}
+        />
+        <Image
+          style={[styles.circleIcon1, styles.circleIconPosition1]}
+          contentFit="cover"
+          source={require("../assets/circle.png")}
+        />
+        <Image
+          style={[styles.circleIcon2, styles.circleIconPosition1]}
+          contentFit="cover"
+          source={require("../assets/circle.png")}
+        />
+        <Image
+          style={[styles.circleIcon3, styles.circleIconPosition1]}
+          contentFit="cover"
+          source={require("../assets/circle.png")}
+        />
+        <Image
+          style={[styles.circleIcon4, styles.circleIconPosition1]}
+          contentFit="cover"
+          source={require("../assets/circle.png")}
+        />
+        <Image
+          style={[styles.circleIcon5, styles.circleIconPosition]}
+          contentFit="cover"
+          source={require("../assets/circle.png")}
+        />
+        <Image
+          style={[styles.circleIcon6, styles.circleIconPosition]}
+          contentFit="cover"
+          source={require("../assets/circle.png")}
+        />
       </View>
       <View style={[styles.registroDeFrequncia, styles.bancoDeHorasLayout]}>
         <Image
@@ -65,7 +98,7 @@ const TelaInicial = () => {
           contentFit="cover"
           source={require("../assets/squircle.png")}
         />
-        <Text style={[styles.registroDeFrequncia1, styles.brutoPosition]}>
+        <Text style={[styles.registroDeFrequncia1, styles.bancoDeHoras1Typo]}>
           Registro de Frequência
         </Text>
       </View>
@@ -77,12 +110,12 @@ const TelaInicial = () => {
           source={require("../assets/vector.png")}
         />
         <Image
-          style={[styles.clipboardListIcon, styles.iconPosition1]}
+          style={[styles.clipboardListIcon, styles.iconLayout]}
           contentFit="cover"
           source={require("../assets/clipboardlist.png")}
         />
         <Image
-          style={[styles.userAltIcon, styles.iconPosition1]}
+          style={[styles.userAltIcon, styles.iconPosition]}
           contentFit="cover"
           source={require("../assets/useralt.png")}
         />
@@ -90,15 +123,14 @@ const TelaInicial = () => {
         <Text style={[styles.solicitaes, styles.incioTypo]}>Solicitações</Text>
         <Text style={[styles.perfil, styles.incioTypo]}>Perfil</Text>
       </View>
-
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  iconLayout1: {
-    overflow: "hidden",
+  iconLayout2: {
     width: "100%",
+    overflow: "hidden",
   },
   bancoDeHorasLayout: {
     height: 134,
@@ -111,17 +143,21 @@ const styles = StyleSheet.create({
   },
   bancoDeHoras1Typo: {
     height: 60,
+    textAlign: "left",
+    color: Color.colorBlack,
     fontSize: FontSize.size_xl,
     top: 33,
     fontFamily: FontFamily.poppinsRegular,
+    position: "absolute",
   },
-  iconLayout: {
+  iconLayout1: {
     height: 54,
     width: 54,
     top: 55,
     position: "absolute",
   },
-  text2FlexBox: {
+  textTypo1: {
+    fontSize: FontSize.size_xs,
     textAlign: "left",
     color: Color.colorBlack,
     position: "absolute",
@@ -139,19 +175,24 @@ const styles = StyleSheet.create({
     fontFamily: FontFamily.poppinsRegular,
     position: "absolute",
   },
-  textTypo: {
-    top: 155,
-    fontSize: FontSize.size_xs,
-    textAlign: "left",
-    color: Color.colorBlack,
-    fontFamily: FontFamily.poppinsRegular,
+  iconLayout: {
+    height: 25,
+    width: 25,
     position: "absolute",
   },
-  brutoPosition: {
-    left: 18,
-    textAlign: "left",
-    color: Color.colorBlack,
+  circleIconPosition1: {
+    top: 43,
+    height: 25,
+    width: 25,
     position: "absolute",
+    overflow: "hidden",
+  },
+  circleIconPosition: {
+    top: 153,
+    height: 25,
+    width: 25,
+    position: "absolute",
+    overflow: "hidden",
   },
   menuLayout: {
     height: 73,
@@ -159,8 +200,8 @@ const styles = StyleSheet.create({
     left: 0,
     position: "absolute",
   },
-  iconPosition1: {
-    top: 22,
+  iconPosition: {
+    left: 306,
     height: 25,
     width: 25,
     position: "absolute",
@@ -181,14 +222,7 @@ const styles = StyleSheet.create({
     top: 0,
     position: "absolute",
   },
-  iconPosition: {
-    top: 13,
-    height: 25,
-    width: 25,
-    position: "absolute",
-    overflow: "hidden",
-  },
-  text2Typo: {
+  textTypo: {
     fontFamily: FontFamily.poppinsBold,
     fontWeight: "700",
   },
@@ -200,9 +234,6 @@ const styles = StyleSheet.create({
   bancoDeHoras1: {
     left: 25,
     width: 99,
-    textAlign: "left",
-    color: Color.colorBlack,
-    position: "absolute",
   },
   bancoDeHoras: {
     left: 190,
@@ -219,7 +250,6 @@ const styles = StyleSheet.create({
   bemVindoUsurioContainer: {
     top: 73,
     left: 119,
-    fontSize: FontSize.size_xs,
   },
   procurarIcon: {
     left: 290,
@@ -234,37 +264,44 @@ const styles = StyleSheet.create({
   descontos: {
     left: 51,
   },
-  text: {
-    left: 67,
-  },
-  text1: {
-    left: 223,
-  },
   bruto: {
     top: 75,
-    fontSize: FontSize.size_xs,
+    left: 18,
+    fontFamily: FontFamily.poppinsRegular,
+  },
+  contrachequeAbril: {
+    top: 17,
+    left: 18,
     fontFamily: FontFamily.poppinsRegular,
   },
   icon: {
     height: "100%",
+    overflow: "hidden",
   },
-  eye: {
+  eyeSlash: {
     left: 283,
-    top: 12,
-    height: 25,
-    width: 25,
-    position: "absolute",
+    top: 13,
   },
-  contrachequeAbril: {
-    top: 17,
-    fontSize: FontSize.size_xs,
-    fontFamily: FontFamily.poppinsRegular,
+  circleIcon: {
+    left: 18,
   },
-  r152075: {
-    top: 44,
-    fontSize: 25,
-    fontFamily: FontFamily.poppinsBold,
-    fontWeight: "700",
+  circleIcon1: {
+    left: 48,
+  },
+  circleIcon2: {
+    left: 78,
+  },
+  circleIcon3: {
+    left: 108,
+  },
+  circleIcon4: {
+    left: 138,
+  },
+  circleIcon5: {
+    left: 71,
+  },
+  circleIcon6: {
+    left: 231,
   },
   contracheque: {
     top: 142,
@@ -272,10 +309,7 @@ const styles = StyleSheet.create({
   },
   registroDeFrequncia1: {
     width: 120,
-    height: 60,
-    fontSize: FontSize.size_xl,
-    top: 33,
-    fontFamily: FontFamily.poppinsRegular,
+    left: 18,
   },
   registroDeFrequncia: {
     left: 19,
@@ -303,9 +337,11 @@ const styles = StyleSheet.create({
   },
   clipboardListIcon: {
     left: 167,
+    top: 22,
+    overflow: "hidden",
   },
   userAltIcon: {
-    left: 306,
+    top: 22,
   },
   incio: {
     left: 28,
@@ -323,9 +359,9 @@ const styles = StyleSheet.create({
     backgroundColor: Color.colorGainsboro,
   },
   batteryThreeQuartersIcon: {
-    left: 306,
+    top: 13,
   },
-  text2: {
+  text: {
     top: 19,
     left: 22,
     fontSize: FontSize.size_xs,
@@ -335,15 +371,20 @@ const styles = StyleSheet.create({
   },
   wifiIcon: {
     left: 274,
+    top: 13,
+    overflow: "hidden",
   },
   signalIcon: {
     left: 239,
+    top: 13,
+    overflow: "hidden",
   },
-  telaInicial: {
+  olhoFechado: {
     backgroundColor: Color.colorWhite,
     flex: 1,
     height: 800,
+    overflow: "hidden",
   },
 });
 
-export default TelaInicial;
+export default OlhoFechado;
